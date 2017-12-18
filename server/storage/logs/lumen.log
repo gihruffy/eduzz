@@ -1,0 +1,71 @@
+[2017-12-14 14:30:53] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Memcached' not found in C:\xampp\htdocs\eduzz\vendor\illuminate\cache\MemcachedConnector.php:69
+Stack trace:
+#0 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\MemcachedConnector.php(48): Illuminate\Cache\MemcachedConnector->createMemcachedInstance(NULL)
+#1 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\MemcachedConnector.php(21): Illuminate\Cache\MemcachedConnector->getMemcached(NULL, Array, Array)
+#2 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\CacheManager.php(171): Illuminate\Cache\MemcachedConnector->connect(Array, NULL, Array, Array)
+#3 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\CacheManager.php(105): Illuminate\Cache\CacheManager->createMemcachedDriver(Array)
+#4 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\CacheManager.php(80): Illuminate\Cache\CacheManager->resolve('memcached')
+#5 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\CacheManager.php(58): Illuminate\Cache\CacheManager->get('memcached')
+#6 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\CacheManager.php(69): Illuminate\Cache\CacheManager->store('memcached')
+#7 C:\xampp\htdocs\eduzz\vendor\illuminate\cache\CacheServiceProvider.php(28): Illuminate\Cache\CacheManager->driver()
+#8 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(749): Illuminate\Cache\CacheServiceProvider->Illuminate\Cache\{closure}(Object(Laravel\Lumen\Application), Array)
+#9 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(631): Illuminate\Container\Container->build(Object(Closure))
+#10 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(586): Illuminate\Container\Container->resolve('cache.store', Array)
+#11 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Application.php(230): Illuminate\Container\Container->make('cache.store', Array)
+#12 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(1195): Laravel\Lumen\Application->make('cache.store')
+#13 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Console\Kernel.php(68): Illuminate\Container\Container->offsetGet('Illuminate\\Cont...')
+#14 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Console\Kernel.php(57): Laravel\Lumen\Console\Kernel->defineConsoleSchedule()
+#15 [internal function]: Laravel\Lumen\Console\Kernel->__construct(Object(Laravel\Lumen\Application))
+#16 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(785): ReflectionClass->newInstanceArgs(Array)
+#17 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(631): Illuminate\Container\Container->build('App\\Console\\Ker...')
+#18 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(586): Illuminate\Container\Container->resolve('App\\Console\\Ker...', Array)
+#19 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Application.php(230): Illuminate\Container\Container->make('App\\Console\\Ker...', Array)
+#20 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(256): Laravel\Lumen\Application->make('App\\Console\\Ker...', Array)
+#21 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(749): Illuminate\Container\Container->Illuminate\Container\{closure}(Object(Laravel\Lumen\Application), Array)
+#22 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(631): Illuminate\Container\Container->build(Object(Closure))
+#23 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(586): Illuminate\Container\Container->resolve('Illuminate\\Cont...', Array)
+#24 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Application.php(230): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#25 C:\xampp\htdocs\eduzz\artisan(32): Laravel\Lumen\Application->make('Illuminate\\Cont...')
+#26 {main}  
+[2017-12-14 14:00:04] lumen.ERROR: ErrorException: Undefined variable: app in C:\xampp\htdocs\eduzz\routes\web.php:19
+Stack trace:
+#0 C:\xampp\htdocs\eduzz\routes\web.php(19): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\eduzz\bootstrap\app.php(99): require('C:\\xampp\\htdocs...')
+#2 [internal function]: {closure}(Object(Laravel\Lumen\Routing\Router))
+#3 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Routing\Router.php(62): call_user_func(Object(Closure), Object(Laravel\Lumen\Routing\Router))
+#4 C:\xampp\htdocs\eduzz\bootstrap\app.php(100): Laravel\Lumen\Routing\Router->group(Array, Object(Closure))
+#5 C:\xampp\htdocs\eduzz\public\index.php(14): require('C:\\xampp\\htdocs...')
+#6 {main}  
+[2017-12-14 14:00:20] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method Laravel\Lumen\Routing\Router::resource() in C:\xampp\htdocs\eduzz\routes\web.php:20
+Stack trace:
+#0 [internal function]: {closure}(Object(Laravel\Lumen\Routing\Router))
+#1 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Routing\Router.php(62): call_user_func(Object(Closure), Object(Laravel\Lumen\Routing\Router))
+#2 C:\xampp\htdocs\eduzz\routes\web.php(21): Laravel\Lumen\Routing\Router->group(Array, Object(Closure))
+#3 C:\xampp\htdocs\eduzz\bootstrap\app.php(99): require('C:\\xampp\\htdocs...')
+#4 [internal function]: {closure}(Object(Laravel\Lumen\Routing\Router))
+#5 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Routing\Router.php(62): call_user_func(Object(Closure), Object(Laravel\Lumen\Routing\Router))
+#6 C:\xampp\htdocs\eduzz\bootstrap\app.php(100): Laravel\Lumen\Routing\Router->group(Array, Object(Closure))
+#7 C:\xampp\htdocs\eduzz\public\index.php(14): require('C:\\xampp\\htdocs...')
+#8 {main}  
+[2017-12-14 14:00:37] lumen.ERROR: ReflectionException: Class App\Http\Controllers\CandidatesController does not exist in C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php:752
+Stack trace:
+#0 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(752): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(631): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#2 C:\xampp\htdocs\eduzz\vendor\illuminate\container\Container.php(586): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#3 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Application.php(230): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#4 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(308): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#5 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(275): Laravel\Lumen\Application->callControllerAction(Array)
+#6 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(260): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(160): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(413): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(166): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(107): Laravel\Lumen\Application->dispatch(NULL)
+#11 C:\xampp\htdocs\eduzz\public\index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2017-12-14 16:59:32] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '$router' (T_VARIABLE) in C:\xampp\htdocs\eduzz\routes\web.php:22
+Stack trace:
+#0 [internal function]: {closure}(Object(Laravel\Lumen\Routing\Router))
+#1 C:\xampp\htdocs\eduzz\vendor\laravel\lumen-framework\src\Routing\Router.php(62): call_user_func(Object(Closure), Object(Laravel\Lumen\Routing\Router))
+#2 C:\xampp\htdocs\eduzz\bootstrap\app.php(100): Laravel\Lumen\Routing\Router->group(Array, Object(Closure))
+#3 C:\xampp\htdocs\eduzz\public\index.php(14): require('C:\\xampp\\htdocs...')
+#4 {main}  
